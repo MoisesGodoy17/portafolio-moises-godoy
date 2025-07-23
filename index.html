@@ -33,7 +33,7 @@
         <div class="button-inicio">
           <button class="btn-link">
             <img src="/assets/linkedin.png" style="height: 25px; width: 25px;">
-            Linkedin
+            LinkedIn
           </button>
           <button class="btn-git">
             <img src="/assets/github.png" style="height: 25px; width: 25px;">
@@ -232,6 +232,34 @@
   const toggle = document.getElementById('nav-toggle');
   const navbar = document.getElementById('nav');
   const navLinks = document.querySelectorAll('#nav-links a');
+
+  const buttonLinkedIn = document.querySelector('.btn-link');
+  const buttonGitHub = document.querySelector('.btn-git');
+  const buttonCV = document.querySelector('.btn-cv');
+  const buttonEmail = document.querySelector('.btn-email');
+
+  // Redirigir a LinkedIn
+  buttonLinkedIn.addEventListener('click', () => {
+    window.open('https://www.linkedin.com/in/moises-andres-godoy-carreño-58b4a4370', '_blank');
+  });
+
+  // Redirigir a GitHub
+  buttonGitHub.addEventListener('click', () => {
+    window.open('https://github.com/MoisesGodoy17', '_blank');
+  });
+
+  // Descargar CV
+  buttonCV.addEventListener('click', () => {
+    window.open('/assets/CV MoisesGodoy.pdf', '_blank');
+  });
+
+  // Copiar correo al portapapeles
+  buttonEmail.addEventListener('click', () => {
+    const email = 'moisesgodoy1704@outlook.com';
+    navigator.clipboard.writeText(email).then(() => {
+      alert('Correo copiado al portapapeles');
+    });
+  });
 
   // Mostrar u ocultar menú
   toggle.addEventListener('click', () => {
