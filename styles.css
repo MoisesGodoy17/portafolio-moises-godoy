@@ -353,15 +353,6 @@ footer {
 /* --- Estilos Responsive para dispositivos móviles --- */
 @media (max-width: 768px) {
 
-  nav {
-    display: none;
-    flex-direction: column;
-    width: 90%;
-    padding: 10px;
-    gap: 10px;
-    position: static;
-  }
-
   .section-inicio {
     margin-top: 3rem;
     padding: 0 1rem;
@@ -430,73 +421,80 @@ footer {
   }
 }
 
-/* --- Navbar responsive con menú hamburguesa --- */
-
-.nav-toggle {
-  display: none;
-  font-size: 2rem;
-  color: #a6edd6;
-  cursor: pointer;
-
-  /* Para fijar el botón */
-  position: absolute;
-  top: 20px;
-  /* separarlo un poco del borde superior */
-  left: 20px;
-  /* separarlo un poco del borde izquierdo */
-  z-index: 1000;
-  /* para que esté siempre encima */
-}
-
+/* === Navbar lateral para versión móvil === */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: space-between;
-    width: 70%;
-    padding: 10px 20px;
+  .side-menu {
+    display: none;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 97%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    border-radius: 0 0 0 0;
+
+    /* --- ANIMACIÓN: Ocultar inicialmente fuera de pantalla a la izquierda --- */
+    transform: translateX(-100%);
+    
+    /* --- ANIMACIÓN: Suavidad al abrir/cerrar (duración y curva) --- */
+    transition: transform 0.3s ease-in-out;
+
+    /* --- ANIMACIÓN: ocultar interacción y visibilidad mientras está cerrado --- */
+    pointer-events: none;
+    opacity: 0;
   }
 
-  nav.show {
+  .side-menu.show {
+    /* --- ANIMACIÓN: Mostrar deslizando desde la izquierda --- */
+    transform: translateX(0);
+
+    /* --- ANIMACIÓN: Habilita interacción y visibilidad cuando está visible --- */
+    pointer-events: auto;
+    opacity: 1;
     display: flex;
   }
 
-  nav.close {
-    display: none;
+
+  .side-menu .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .side-menu .nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* --- (Opcional) Transición suave en hover --- */
+    transition: background 0.3s;
+  }
+
+  .side-menu .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding-left: 10px;
   }
 
   .nav-toggle {
-    display: flex;
-    /* Para fijar el botón */
+    display: block;
+    font-size: 2rem;
+    color: #a6edd6;
+    cursor: pointer;
     position: fixed;
     top: 20px;
-    /* separarlo un poco del borde superior */
     left: 20px;
-    /* separarlo un poco del borde izquierdo */
-    z-index: 1000;
-    /* para que esté siempre encima */
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    font-size: 1.1rem;
-    color: #ffffff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .nav-links a:last-child {
-    border-bottom: none;
+    z-index: 1100;
   }
 }
 
