@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div> <!-- Menú hamburguesa -->
+    <nav id="nav">
+      <div class="nav-links" id="nav-links">
+        <a href="#about">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#skills">Habilidades</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="inicio">
+      <div class="section-inicio">
+        <img src="/assets/chucky.png" class="photo" alt="Foto de perfil">
+        <h1>Moises Godoy Carreño</h1>
+        <p>Software Engineer.</p>
+        <p>Desarrollador Full Stack de aplicaciones Web.
+          Santiago de Chile.</p>
+        <button class="btn-disp">Disponible para trabajar</button>
+        <div class="button-inicio">
+          <button class="btn-link">
+            <img src="/assets/linkedin.png" style="height: 25px; width: 25px;">
+            Linkedin
+          </button>
+          <button class="btn-git">
+            <img src="/assets/github.png" style="height: 25px; width: 25px;">
+            GitHub</button>
+          <button class="btn-cv">
+            <img src="/assets/archivo.png" style="height: 25px; width: 25px;">
+            CV</button>
+          <button class="btn-email">
+            <img src="/assets/correo.png" style="height: 25px; width: 25px;">
+            moisesgodoy1704@outlook.com</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-me">
+        <h1>Sobre mí</h1>
+        <div class="about-me-text">
+          <p>Desarrollador Full Stack con experiencia
+            inicial en el desarrollo de aplicaciones web.
+            Recientemente me titulé como ingeniero de
+            ejecución en computación e informática y
+            actualmente estoy dando mis primeros pasos
+            en la industria tecnológica.</p>
+          <p>Me destaco por crear aplicaciones web que
+            buscan solucionar problemas cotidianos mediante
+            el uso de la tecnología. Aunque estoy iniciando
+            mi carrera profesional, me caracterizo por
+            aprender rápido y fomentar ideas innovadoras,
+            lo cual me ha permitido contribuir eficazmente
+            en los proyectos en los que he participado.</p>
+          <p>Me interesa mantenerme actualizado
+            con las últimas tendencias y herramientas del
+            desarrollo, y busco siempre mejorar tanto en
+            lo técnico como en habilidades de trabajo en
+            equipo y comunicación. Estoy abierto a nuevas
+            oportunidades donde pueda seguir creciendo y
+            aportar con entusiasmo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="proyectos">
+      <div class="section-proyectos">
+        <h1>Proyectos</h1>
+        <div class="card-proyectos">
+          <img src="/assets/proyect.PNG" alt="Proyecto 1" style="width: auto; height: auto;">
+          <div class="card-content">
+            <h2>Landing Page</h2>
+            <p>Landing page creada para una empresa ficticia
+              consultora de ingeniería. El proceso de diseño
+              se realizó con el programa Figma. La página
+              está construida en CSS, HMTL y JavaScript, no
+              se utilizaron librerías de diseño.</p>
+            <div class="card-skills">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Java Script</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-proyectos">
+          <img src="/assets/proyect.PNG" alt="Proyecto 1" style="width: auto; height: auto;">
+          <div class="card-content">
+            <h2>Sensor Steam Reddit y Stack Overflow</h2>
+            <p>Como parte de mi trabajo de título, desarrollé
+              una aplicación que recopila las horas de juego
+              en Steam, la reputación en Stack Overflow y el
+              karma en Reddit, para luego transformar estos
+              datos y enviarlos a una API externa para ser
+              consumidos.</p>
+            <div class="card-skills">
+              <p>React</p>
+              <p>Express.js</p>
+              <p>SQLite</p>
+              <p>Electron.js</p>
+              <p>Docker</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-proyectos">
+          <img src="/assets/proyect.PNG" alt="Proyecto 1" style="width: auto; height: auto;">
+          <div class="card-content">
+            <h2>Aplicación Web</h2>
+            <p>Como parte de la práctica profesional se creó
+              un sistema de gestión de clientes para la empresa
+              Tritium ingeniería Spa consultora de ingeniería.</p>
+            <div class="card-skills">
+              <p>Spring Boot</p>
+              <p>React</p>
+              <p>Java</p>
+              <p>Flask</p>
+              <p>PostgreSQL</p>
+              <p>Docker</p>
+              <p>JWT</p>
+              <p>Material UI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="experiencia">
+      <div class="section-experiencia">
+        <h1>Experiencia</h1>
+        <div class="experiencia-item">
+          <h2>Tritium Ingeniería Spa - Práctica profesional</h2>
+          <p>Desarrollador Full Stack - 03/2024 - 09/2024</p>
+          <p1>Participación en el desarrollo de una solución tecnológica
+            para la empresa, mediante la creación de una aplicación web
+            con un sistema de gestión de clientes. Mis tareas fueron:
+            Desarrollo e integración de un sistema de gestión de clientes
+            utilizando Spring Boot (Java).
+            Diseño e implementación de la interfaz web con ReactJS.
+            Creación de pipelines CI/CD para despliegues automatizados.</p1>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills">
+      <div class="section-skills">
+        <h1>Habilidades</h1>
+        <div class="skills-container">
+          <div class="skills-list">
+            <img src="/assets/operacion.png" alt="Skills" class="skills-image" style="width: 50px; height: 50px;">
+            <h2>Framework</h2>
+            <div class="skill-item">
+              <p>Spring Boot</p>
+              <p>React</p>
+              <p>Express.js</p>
+              <p>.Net 6</p>
+              <p>Flask</p>
+            </div>
+          </div>
+
+          <div class="skills-list">
+            <img src="/assets/ventana-de-codigo.png" alt="Skills" class="skills-image"
+              style="width: 50px; height: 50px;">
+            <h2>Lenguajes</h2>
+            <div class="skill-item">
+              <p>Java</p>
+              <p>Java Script</p>
+              <p>C#</p>
+              <p>C</p>
+              <p>Python</p>
+              <p>HTML</p>
+              <p>CSS</p>
+            </div>
+          </div>
+
+          <div class="skills-list">
+            <img src="/assets/gestion-de-bases-de-datos.png" alt="Skills" class="skills-image"
+              style="width: 50px; height: 50px;">
+            <h2>Bases de datos</h2>
+            <div class="skill-item">
+              <p>PostgreSQL</p>
+              <p>SQLite</p>
+              <p>MongoDB</p>
+            </div>
+          </div>
+
+          <div class="skills-list">
+            <img src="/assets/bulbo.png" alt="Skills" class="skills-image" style="width: 50px; height: 50px;">
+            <h2>Tecnologias</h2>
+            <div class="skill-item">
+              <p>AWS EC2</p>
+              <p>Docker</p>
+              <p>Postman</p>
+              <p>Jenkins</p>
+              <p>GitHub</p>
+              <p>Jira</p>
+            </div>
+          </div>
+
+          <div class="skills-list">
+            <img src="/assets/libro-marcador.png" alt="Skills" class="skills-image" style="width: 50px; height: 50px;">
+            <h2>Librerias</h2>
+            <div class="skill-item">
+              <p>JWT</p>
+              <p>Axios</p>
+              <p>Bootstrap 5</p>
+              <p>Material UI</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+
+    function abrirMenu() {
+      navLinks.style.transition = 'height 0.3s ease';
+      navLinks.style.height = navLinks.scrollHeight + 'px'; // altura natural del contenido
+    }
+
+    function cerrarMenu() {
+      navLinks.style.transition = 'height 0.3s ease';
+      navLinks.style.height = '0';
+    }
+
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    const navbar = document.getElementById('nav');
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('show');
+      navbar.classList.toggle('show');
+      abrirMenu();
+    });
+
+    const navLinks = document.getElementById('nav-links');
+    const linkss = navLinks.querySelectorAll('a');
+
+    linkss.forEach(link => {
+      link.addEventListener('click', () => {
+        // Cerrar el menú al hacer clic en un enlace
+        cerrarMenu();
+        setTimeout(() => {
+          links.classList.remove('show');
+          navbar.classList.remove('show');
+        }, timeout =200);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
