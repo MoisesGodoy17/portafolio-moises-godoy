@@ -166,7 +166,7 @@
               <p>Spring Boot</p>
               <p>React</p>
               <p>Express.js</p>
-              <p>.Net 6</p>
+              <p>.Net 6.0</p>
               <p>Flask</p>
             </div>
           </div>
@@ -205,7 +205,8 @@
               <p>Docker</p>
               <p>Postman</p>
               <p>Jenkins</p>
-              <p>GitHub</p>
+              <p>Git</p>
+              <p>Figma</p>
               <p>Jira</p>
             </div>
           </div>
@@ -229,52 +230,54 @@
   </footer>
 
   <script>
-  const toggle = document.getElementById('nav-toggle');
-  const navbar = document.getElementById('nav');
-  const navLinks = document.querySelectorAll('#nav-links a');
+    const toggle = document.getElementById('nav-toggle');
+    const navbar = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('#nav-links a');
 
-  const buttonLinkedIn = document.querySelector('.btn-link');
-  const buttonGitHub = document.querySelector('.btn-git');
-  const buttonCV = document.querySelector('.btn-cv');
-  const buttonEmail = document.querySelector('.btn-email');
+    const buttonLinkedIn = document.querySelector('.btn-link');
+    const buttonGitHub = document.querySelector('.btn-git');
+    const buttonCV = document.querySelector('.btn-cv');
+    const buttonEmail = document.querySelector('.btn-email');
 
-  // Redirigir a LinkedIn
-  buttonLinkedIn.addEventListener('click', () => {
-    window.open('https://www.linkedin.com/in/moises-andres-godoy-carreño-58b4a4370', '_blank');
-  });
-
-  // Redirigir a GitHub
-  buttonGitHub.addEventListener('click', () => {
-    window.open('https://github.com/MoisesGodoy17', '_blank');
-  });
-
-  // Descargar CV
-  buttonCV.addEventListener('click', () => {
-    window.open('/assets/CV MoisesGodoy.pdf', '_blank');
-  });
-
-  // Copiar correo al portapapeles
-  buttonEmail.addEventListener('click', () => {
-    const email = 'moisesgodoy1704@outlook.com';
-    navigator.clipboard.writeText(email).then(() => {
-      alert('Correo copiado al portapapeles');
+    // Redirigir a LinkedIn
+    buttonLinkedIn.addEventListener('click', () => {
+      window.open('https://www.linkedin.com/in/moises-andres-godoy-carreño-58b4a4370', '_blank');
     });
-  });
 
-  // Mostrar u ocultar menú
-  toggle.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-  });
-
-  // Cerrar con animación al hacer clic en un enlace
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        navbar.classList.remove('show');
-      }
+    // Redirigir a GitHub
+    buttonGitHub.addEventListener('click', () => {
+      window.open('https://github.com/MoisesGodoy17', '_blank');
     });
-  });
-</script>
+
+    // Descargar CV
+    buttonCV.addEventListener('click', () => {
+      window.open('/assets/CV MoisesGodoy.pdf', '_blank');
+    });
+
+    // Copiar correo al portapapeles
+    buttonEmail.addEventListener('click', () => {
+      const email = 'moisesgodoy1704@outlook.com';
+      navigator.clipboard.writeText(email).then(() => {
+        alert('Correo copiado al portapapeles');
+      });
+    });
+
+    // Mostrar u ocultar menú
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+
+    // Cerrar con animación al hacer clic en un enlace
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navbar.classList.remove('show');
+        }
+      });
+    });
+
+    
+  </script>
 
 
 </body>

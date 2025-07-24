@@ -6,9 +6,6 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(135deg, #0c0d36, #3a308f);
-
-
-  /* Color de fondo */
 }
 
 /* Encabezado background-color: #0c0d36;*/
@@ -24,8 +21,8 @@ nav {
   display: flex;
   justify-content: space-around;
   background: rgba(255, 255, 255, 0.2);
-  padding: 20px;
   backdrop-filter: blur(10px);
+  padding: 20px;
   border-radius: 30px;
   width: 30%;
   position: fixed;
@@ -339,9 +336,6 @@ p {
   color: #ffffff;
 }
 
-/* Sección de contacto */
-
-
 /* Pie de página */
 footer {
   background-color: #333;
@@ -349,6 +343,7 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
 
 /* --- Estilos Responsive para dispositivos móviles --- */
 @media (max-width: 768px) {
@@ -399,7 +394,7 @@ footer {
     height: auto;
   }
 
-  .card-skills{
+  .card-skills {
     margin-top: 20px;
   }
 
@@ -419,6 +414,16 @@ footer {
   .skill-item p {
     font-size: 1rem;
   }
+
+  #inicio,
+  #about,
+  #proyectos,
+  #experiencia,
+  #skills,
+  #contacto {
+    scroll-margin-top: 30px;
+    /* Ajusta según la altura de tu navbar */
+  }
 }
 
 /* === Navbar lateral para versión móvil === */
@@ -428,8 +433,8 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 97%;
+    width: 200px;
+    height: 100%;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     padding: 20px;
@@ -442,10 +447,8 @@ footer {
 
     /* --- ANIMACIÓN: Ocultar inicialmente fuera de pantalla a la izquierda --- */
     transform: translateX(-100%);
-    
     /* --- ANIMACIÓN: Suavidad al abrir/cerrar (duración y curva) --- */
     transition: transform 0.3s ease-in-out;
-
     /* --- ANIMACIÓN: ocultar interacción y visibilidad mientras está cerrado --- */
     pointer-events: none;
     opacity: 0;
@@ -454,13 +457,11 @@ footer {
   .side-menu.show {
     /* --- ANIMACIÓN: Mostrar deslizando desde la izquierda --- */
     transform: translateX(0);
-
     /* --- ANIMACIÓN: Habilita interacción y visibilidad cuando está visible --- */
     pointer-events: auto;
     opacity: 1;
     display: flex;
   }
-
 
   .side-menu .nav-links {
     display: flex;
@@ -481,20 +482,29 @@ footer {
   }
 
   .side-menu .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     padding-left: 10px;
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     font-size: 2rem;
     color: #a6edd6;
     cursor: pointer;
     position: fixed;
-    top: 20px;
-    left: 20px;
     z-index: 1100;
+    top: 0px;
+    align-items: center;
+    height: 5%;
+  }
+
+  .nav-toggle.show {
+    background-color: none;
   }
 }
 
@@ -522,5 +532,15 @@ footer {
     border-bottom: none;
     font-size: 1.2rem;
     color: #a6edd6;
+  }
+
+  #inicio,
+  #about,
+  #proyectos,
+  #experiencia,
+  #skills,
+  #contacto {
+    scroll-margin-top: 90px;
+    /* Ajusta según la altura de tu navbar */
   }
 }
