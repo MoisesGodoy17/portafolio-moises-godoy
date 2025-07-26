@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
+  <title>Portfolio Moises Godoy</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -13,11 +13,26 @@
     <div class="nav-toggle" id="nav-toggle">&#9776;</div> <!-- Menú hamburguesa -->
     <nav id="nav" class="side-menu">
       <div class="nav-links" id="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#about">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#skills">Habilidades</a>
+        <div class="icon-nav">
+          <img src="/assets/casa.png" alt="Logo" style="width: 17px; height: 17px;">
+          <a href="#inicio">Inicio</a>
+        </div>
+        <div class="icon-nav">
+          <img src="/assets/usuario.png" alt="Sobre mí" style="width: 17px; height: 17px;">
+          <a href="#about">Sobre mí</a>
+        </div>
+        <div class="icon-nav">
+          <img src="/assets/maletin-en-blanco.png" alt="Proyectos" style="width: 17px; height: 17px;">
+          <a href="#proyectos">Proyectos</a>
+        </div>
+        <div class="icon-nav">
+          <img src="/assets/documento.png" alt="Experiencia" style="width: 17px; height: 17px;">
+          <a href="#experiencia">Experiencia</a>
+        </div>
+        <div class="icon-nav">
+          <img src="/assets/cerebro.png" alt="Habilidades" style="width: 17px; height: 17px;">
+          <a href="#skills">Habilidades</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -93,6 +108,12 @@
               <p>CSS</p>
               <p>Java Script</p>
             </div>
+            <button class="btn-link" 
+            style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px;">
+                <img src="/assets/enlace.png" alt="Figma" class="gitbutton" 
+                style="width: 25px; height:25px; border-radius: 0px;">
+            </button>
           </div>
         </div>
 
@@ -263,18 +284,18 @@
     });
 
     // Mostrar u ocultar menú
-    toggle.addEventListener('click', () => {
-      navbar.classList.toggle('show');
-    });
+    // toggle.addEventListener('click', () => {
+    //   navbar.classList.toggle('show');
+    // });
 
-    // Cerrar con animación al hacer clic en un enlace
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          navbar.classList.remove('show');
-        }
-      });
-    });
+    // // Cerrar con animación al hacer clic en un enlace
+    // navLinks.forEach(link => {
+    //   link.addEventListener('click', () => {
+    //     if (window.innerWidth <= 768) {
+    //       navbar.classList.remove('show');
+    //     }
+    //   });
+    // });
 
     
   </script>

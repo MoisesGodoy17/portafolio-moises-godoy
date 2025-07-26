@@ -12,8 +12,7 @@ body {
 header {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 /* Navegación */
@@ -24,7 +23,7 @@ nav {
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 30px;
-  width: 30%;
+  width: auto;
   position: fixed;
   top: 10;
   z-index: 1030;
@@ -349,7 +348,7 @@ footer {
 @media (max-width: 768px) {
 
   .section-inicio {
-    margin-top: 3rem;
+    margin-top: 4.5rem;
     padding: 0 1rem;
   }
 
@@ -372,7 +371,7 @@ footer {
   .btn-email {
     width: 100%;
     justify-content: center;
-    transform: translateX(-2.5%);
+    transform: translateX(-3%);
   }
 
   .about-me,
@@ -421,90 +420,38 @@ footer {
   #experiencia,
   #skills,
   #contacto {
-    scroll-margin-top: 30px;
+    scroll-margin-top: 60px;
     /* Ajusta según la altura de tu navbar */
   }
 }
 
 /* === Navbar lateral para versión móvil === */
 @media (max-width: 768px) {
-  .side-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    flex-direction: column;
-    z-index: 1000;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-    transform: translateX(-100%);
-    border-radius: 0 0 0 0;
-
-    /* --- ANIMACIÓN: Ocultar inicialmente fuera de pantalla a la izquierda --- */
-    transform: translateX(-100%);
-    /* --- ANIMACIÓN: Suavidad al abrir/cerrar (duración y curva) --- */
-    transition: transform 0.3s ease-in-out;
-    /* --- ANIMACIÓN: ocultar interacción y visibilidad mientras está cerrado --- */
-    pointer-events: none;
-    opacity: 0;
+  .side-menu{
+    width: auto;
+    padding: 10px;
   }
 
-  .side-menu.show {
-    /* --- ANIMACIÓN: Mostrar deslizando desde la izquierda --- */
-    transform: translateX(0);
-    /* --- ANIMACIÓN: Habilita interacción y visibilidad cuando está visible --- */
-    pointer-events: auto;
-    opacity: 1;
+  .side-menu .nav-links{
     display: flex;
-  }
-
-  .side-menu .nav-links {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;    
   }
 
   .side-menu .nav-links a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 0;
-    color: white;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-
-    /* --- (Opcional) Transición suave en hover --- */
-    transition: background 0.3s;
-  }
-
-  .side-menu .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding-left: 10px;
-  }
-
-  .nav-toggle {
-    display: flex;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    font-size: 2rem;
+    margin: 0px;
+    padding: 5px;
+    font-size: 0.8rem;
     color: #a6edd6;
-    cursor: pointer;
-    position: fixed;
-    z-index: 1100;
-    top: 0px;
-    align-items: center;
-    height: 5%;
   }
 
-  .nav-toggle.show {
-    background-color: none;
+  .icon-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
   }
 }
 
@@ -527,6 +474,13 @@ footer {
     gap: 2rem;
     width: auto;
   }
+  
+  .icon-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
 
   .nav-links a {
     border-bottom: none;
@@ -540,7 +494,7 @@ footer {
   #experiencia,
   #skills,
   #contacto {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 60px;
     /* Ajusta según la altura de tu navbar */
   }
 }
