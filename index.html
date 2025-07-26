@@ -95,7 +95,7 @@
       <div class="section-proyectos">
         <h1>Proyectos</h1>
         <div class="card-proyectos">
-          <img src="/assets/proyect.PNG" alt="Proyecto 1" style="width: auto; height: auto;">
+          <img src="/assets/ingrnc1.png" alt="Proyecto 1">
           <div class="card-content">
             <h2>Landing Page</h2>
             <p>Landing page creada para una empresa ficticia
@@ -108,17 +108,16 @@
               <p>CSS</p>
               <p>Java Script</p>
             </div>
-            <button class="btn-link" 
-            style="width: 60px; height: 40px; padding: 0; display: flex; 
-            justify-content: center; align-items: center; margin-left: 2px;">
-                <img src="/assets/enlace.png" alt="Figma" class="gitbutton" 
+            <button class="btn-link" id='link-landing-page' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+              <img src="/assets/enlace.png" alt="link" class="gitbutton"
                 style="width: 25px; height:25px; border-radius: 0px;">
             </button>
           </div>
         </div>
 
         <div class="card-proyectos">
-          <img src="/assets/proyect.PNG" alt="Proyecto 1" style="width: auto; height: auto;">
+          <img src="/assets/games1.png" alt="Proyecto 1">
           <div class="card-content">
             <h2>Sensor Steam Reddit y Stack Overflow</h2>
             <p>Como parte de mi trabajo de título, desarrollé
@@ -134,16 +133,53 @@
               <p>Electron.js</p>
               <p>Docker</p>
             </div>
+            <button class="btn-link" id='link-sensor-bgames' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+              <img src="/assets/enlace.png" alt="link" class="gitbutton"
+                style="width: 25px; height:25px; border-radius: 0px;">
+            </button>
           </div>
         </div>
 
         <div class="card-proyectos">
-          <img src="/assets/proyect.PNG" alt="Proyecto 1" style="width: auto; height: auto;">
+          <img src="/assets/mod.png" alt="Proyecto 1">
+          <div class="card-content">
+            <h2>Mod Stardew Valley</h2>
+            <p>Como parte de mi trabajo de título, desarrollé
+              un mod para Stardew Valley que incorpora nuevas
+              mecánicas de juego. Además, integra un sistema de consumo
+              de puntos conectado a una API externa.</p>
+            <div class="card-skills">
+              <p>.NET 6.0</p>
+              <p>SMAPI</p>
+              <p>Docker</p>
+            </div>
+            <div style="display: flex; ">
+              <button class="btn-link" id='link-mod' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+                <img src="/assets/enlace.png" alt="link" class="gitbutton"
+                  style="width: 25px; height:25px; border-radius: 0px;">
+              </button>
+              <button class="btn-link" id='video-mod' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+                <img src="/assets/video.png" alt="link" class="gitbutton"
+                  style="width: 25px; height:25px; border-radius: 0px;">
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card-proyectos">
+          <img src="/assets/tritium.png" alt="Proyecto 1">
           <div class="card-content">
             <h2>Aplicación Web</h2>
             <p>Como parte de la práctica profesional se creó
               un sistema de gestión de clientes para la empresa
-              Tritium ingeniería Spa consultora de ingeniería.</p>
+              Tritium Ingeniería Spa, una consultora especializada
+              en ingeniería. Este sistema permite almacenar y
+              administrar cotizaciones. Además, diseñé una landing page con un
+              chatbot integrado, potenciado por Gemini.</p>
             <div class="card-skills">
               <p>Spring Boot</p>
               <p>React</p>
@@ -154,8 +190,14 @@
               <p>JWT</p>
               <p>Material UI</p>
             </div>
+            <button class="btn-link" id='video-tritium' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+              <img src="/assets/video.png" alt="link" class="gitbutton"
+                style="width: 25px; height:25px; border-radius: 0px;">
+            </button>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -247,18 +289,49 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    <p>
+  &copy; 2025 Moises Godoy. Todos los derechos reservados. |
+  <a href="https://github.com/MoisesGodoy17" target="_blank">GitHub</a> |
+  <a href="mailto:moisesgodoy1704@outlook.com">Email</a>
+</p>
   </footer>
 
   <script>
-    const toggle = document.getElementById('nav-toggle');
-    const navbar = document.getElementById('nav');
-    const navLinks = document.querySelectorAll('#nav-links a');
 
     const buttonLinkedIn = document.querySelector('.btn-link');
     const buttonGitHub = document.querySelector('.btn-git');
     const buttonCV = document.querySelector('.btn-cv');
     const buttonEmail = document.querySelector('.btn-email');
+
+    const linkLandingPage = document.getElementById('link-landing-page');
+    const linkSensorBGames = document.getElementById('link-sensor-bgames');
+    const linkTritium = document.getElementById('link-tritium');
+    const linkMod = document.getElementById('link-mod');
+    const videoMod = document.getElementById('video-mod');
+    const videoTritium = document.getElementById('video-tritium');
+
+    videoMod.addEventListener('click', () => {
+      window.open('https://drive.google.com/file/d/1ndJ8gaWkU2nWV7yEfS6PapakABSfYXN9/view?usp=drive_link', '_blank');
+    });
+
+    videoTritium.addEventListener('click', () => {
+      window.open('https://drive.google.com/file/d/1IwmnOcifoseTH32BLL6waInkhJbKMrNX/view?usp=drive_link', '_blank');
+    });
+
+    // Redirigir a la landing page
+    linkLandingPage.addEventListener('click', () => {
+      window.open('https://github.com/MoisesGodoy17/landing-page-ingrnc', '_blank');
+    });
+
+    // Redirigir al sensor de juegos
+    linkSensorBGames.addEventListener('click', () => {
+      window.open('https://github.com/BlendedGames-bGames/sensor-steam-react', '_blank');
+    });
+
+    // Redirigir a Mod Stardew Valley
+    linkMod.addEventListener('click', () => {
+      window.open('https://github.com/BlendedGames-bGames/bGames-Stardew-Valley-Mod', '_blank');
+    });
 
     // Redirigir a LinkedIn
     buttonLinkedIn.addEventListener('click', () => {
@@ -297,7 +370,7 @@
     //   });
     // });
 
-    
+
   </script>
 
 
