@@ -39,7 +39,7 @@
   <main>
     <section class="inicio">
       <div class="section-inicio">
-        <img src="/assets/yo.png" class="photo" alt="Foto de perfil">
+        <img src="/assets/yo.jpg" class="photo" alt="Foto de perfil">
         <h1>Moises Godoy Carreño</h1>
         <p>Software Engineer.</p>
         <p>Desarrollador Full Stack de aplicaciones Web.
@@ -95,7 +95,9 @@
       <div class="section-proyectos">
         <h1>Proyectos</h1>
         <div class="card-proyectos">
-          <img src="/assets/ingrnc1.png" alt="Proyecto 1">
+          <div class="card-image-proyectos">
+            <img src="/assets/ingrnc1.png" alt="Proyecto 1">
+          </div>
           <div class="card-content">
             <h2>Landing Page</h2>
             <p>Landing page creada para una empresa ficticia
@@ -128,9 +130,11 @@
               consumidos.</p>
             <div class="card-skills">
               <p>React</p>
+              <p>Node.js</p>
               <p>Express.js</p>
-              <p>SQLite</p>
               <p>Electron.js</p>
+              <p>SQLite</p>
+              <p>Axios</p>
               <p>Docker</p>
             </div>
             <button class="btn-link" id='link-sensor-bgames' style="width: 60px; height: 40px; padding: 0; display: flex; 
@@ -184,15 +188,46 @@
               <p>Spring Boot</p>
               <p>React</p>
               <p>Java</p>
-              <p>Flask</p>
-              <p>PostgreSQL</p>
-              <p>Docker</p>
+              <p>Spring Security</p>
               <p>JWT</p>
+              <p>PostgreSQL</p>
+              <p>Flask</p>
+              <p>Docker</p>
+              <p>Axios</p>
               <p>Material UI</p>
             </div>
             <button class="btn-link" id='video-tritium' style="width: 60px; height: 40px; padding: 0; display: flex; 
             justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
               <img src="/assets/video.png" alt="link" class="gitbutton"
+                style="width: 25px; height:25px; border-radius: 0px;">
+            </button>
+          </div>
+        </div>
+
+        <div class="card-proyectos">
+          <img src="/assets/top.png" alt="Proyecto 1">
+          <div class="card-content">
+            <h2>Gestion de pagos de aranceles</h2>
+            <p>aplicación web monolítica desarrollada en Java 17 
+              usando Spring Boot 3, diseñada para automatizar la 
+              gestión de pagos de aranceles en la academia preuniversitaria 
+              TopEducation. Su despliegue se realiza en un entorno de 
+              contenedores con Docker Compose, incluye balanceo de 
+              carga con Nginx y una base de datos en PostgreSQL</p>
+            <div class="card-skills">
+              <p>Spring Boot</p>
+              <p>Java 17</p>
+              <p>PostgreSQL</p>
+              <p>Nginx</p>
+              <p>Docker</p>
+              <p>Jenkins</p>
+              <p>JUnit</p>
+              <p>Thymeleaf</p>
+              <p>Bootstrap 5</p>
+            </div>
+            <button class="btn-link" id='link-top' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+              <img src="/assets/enlace.png" alt="link" class="gitbutton"
                 style="width: 25px; height:25px; border-radius: 0px;">
             </button>
           </div>
@@ -309,6 +344,11 @@
     const linkMod = document.getElementById('link-mod');
     const videoMod = document.getElementById('video-mod');
     const videoTritium = document.getElementById('video-tritium');
+    const linkTop = document.getElementById('link-top');
+
+    linkTop.addEventListener('click', () => {
+      window.open('https://github.com/MoisesGodoy17/Tingeso-Top-Education.git', '_blank');
+    });
 
     videoMod.addEventListener('click', () => {
       window.open('https://drive.google.com/file/d/1ndJ8gaWkU2nWV7yEfS6PapakABSfYXN9/view?usp=drive_link', '_blank');
@@ -320,7 +360,7 @@
 
     // Redirigir a la landing page
     linkLandingPage.addEventListener('click', () => {
-      window.open('https://github.com/MoisesGodoy17/landing-page-ingrnc', '_blank');
+      window.open('https://landing-page-ingrnc.onrender.com', '_blank');
     });
 
     // Redirigir al sensor de juegos
@@ -355,22 +395,7 @@
         alert('Correo copiado al portapapeles');
       });
     });
-
-    // Mostrar u ocultar menú
-    // toggle.addEventListener('click', () => {
-    //   navbar.classList.toggle('show');
-    // });
-
-    // // Cerrar con animación al hacer clic en un enlace
-    // navLinks.forEach(link => {
-    //   link.addEventListener('click', () => {
-    //     if (window.innerWidth <= 768) {
-    //       navbar.classList.remove('show');
-    //     }
-    //   });
-    // });
-
-
+    
   </script>
 
 
