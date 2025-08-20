@@ -84,6 +84,7 @@
              y SQLite, así como herramientas de desarrollo y colaboración 
              como Git, Docker, Postman y Jira (Scrum), aplicando buenas 
              prácticas y metodologías ágiles para lograr resultados eficientes.</p>
+          <p>Ingeniero de ejecución en computación e informática (Titulado) - Universidad de Santiago de Chile. Mar 2019 - Dic 2024</p>
         </div>
       </div>
     </section>
@@ -91,6 +92,36 @@
     <section id="proyectos" class="proyectos">
       <div class="section-proyectos">
         <h1>Proyectos</h1>
+
+        <div class="card-proyectos">
+          <div class="card-image-proyectos">
+            <img src="/assets/chat-bot.png" alt="Proyecto 1">
+          </div>
+          <div class="card-content">
+            <h2>Copiloto Conversacional</h2>
+            <p>Copiloto Conversacional sobre PDFs
+            Aplicación web que permite subir y gestionar hasta 5 archivos PDF, 
+            realizar preguntas en lenguaje natural sobre su contenido y comparar 
+            documentos seleccionados. Desarrollada con React y Flask, integra 
+            procesamiento de texto y modelos de IA para facilitar el análisis 
+            rápido y contextual de la información.</p>
+            <div class="card-skills">
+              <p>LangChain</p>
+              <p>ChromaBD</p>
+              <p>Flask</p>
+              <p>Python</p>
+              <p>Gemini AI</p>
+              <p>React</p>
+              <p>Docker</p>
+            </div>
+            <button class="btn-link" id='link-copiloto' style="width: 60px; height: 40px; padding: 0; display: flex; 
+            justify-content: center; align-items: center; margin-left: 2px; margin-top: 10px;">
+              <img src="/assets/enlace.png" alt="link" class="gitbutton"
+                style="width: 25px; height:25px; border-radius: 0px;">
+            </button>
+          </div>
+        </div>
+
         <div class="card-proyectos">
           <div class="card-image-proyectos">
             <img src="/assets/ingrnc1.png" alt="Proyecto 1">
@@ -350,6 +381,11 @@
     const videoMod = document.getElementById('video-mod');
     const videoTritium = document.getElementById('video-tritium');
     const linkTop = document.getElementById('link-top');
+    const linkCopiloto = document.getElementById('link-copiloto');
+
+    linkCopiloto.addEventListener('click', () => {
+      window.open('https://github.com/MoisesGodoy17/copiloto-conversacional.git', '_blank');
+    });
 
     linkTop.addEventListener('click', () => {
       window.open('https://github.com/MoisesGodoy17/Tingeso-Top-Education.git', '_blank');
